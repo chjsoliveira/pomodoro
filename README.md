@@ -1,6 +1,6 @@
-<h1 align="center">Minhas Coleções</h1>
+<h1 align="center">Pomodoro</h1>
 <p align="center">
-  <img width="150" src="https://github.com/chjsoliveira/myCollections/blob/main/assets/adaptive-icon.png"/>
+  <img width="150" src="https://github.com/chjsoliveira/pomodoro/blob/main/assets/adaptive-icon.png"/>
 </p>
 <p align="center">
   Built with React Native.
@@ -20,13 +20,11 @@
 
 ## Introduction
 
-Minhas Coleções is a platform to control your collection itens. A collector can organize your items and share with your friends to receive a gift.
+Pomodoro is a platform to control your activities and run the pomodoro technique.
 
 ## Features
 
-- Users can create new collections and add itens there.
-- Forget password
-- Share collection using whatsapp
+- Users can create new task
 - And others
 
 ## Requirements
@@ -40,16 +38,16 @@ Minhas Coleções is a platform to control your collection itens. A collector ca
 ## Usage for development
 
 1. Open your terminal or command prompt
-2. Type `git clone https://github.com/chjsoliveira/myCollections.git`
+2. Type `git clone https://github.com/chjsoliveira/pomodoro.git`
 3. Open the folder and type `npm install` or `yarn install` for install dependencies and `react-native link`
 4. Type `expo client:install:android` for run this app. **_Make sure your device is connected with debugging mode_**.
 
 ## Screenshots
 
 <div align="center">
-    <img width="250" src="https://github.com/chjsoliveira/myCollections/blob/main/ScreenShot/Login.PNG">    
-    <img width="250" src="https://github.com/chjsoliveira/myCollections/blob/main/ScreenShot/Cole%C3%A7%C3%B5es.PNG">
-    <img width="250" src="https://github.com/chjsoliveira/myCollections/blob/main/ScreenShot/Detalhe.PNG">
+    <img width="250" src="">    
+    <img width="250" src="">
+    <img width="250" src="">
 </div>
 
 More [screenshots]().
