@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { Entypo, AntDesign } from '@expo/vector-icons';
 import styles from './styles';
+import * as theme from '../../theme';
 
 export default function Header({ navigation, toggleDrawer, title }) {
   const handleToggleDrawer = () => {
@@ -16,7 +17,7 @@ export default function Header({ navigation, toggleDrawer, title }) {
       {toggleDrawer ? (
         <TouchableOpacity onPress={handleToggleDrawer}>
           <View style={styles.button}>
-            <Entypo name="menu" size={30} color="black" />
+            <Entypo name="menu" size={30} color={theme.colors.primary} />
           </View>
         </TouchableOpacity>
       ) : !toggleDrawer ? (

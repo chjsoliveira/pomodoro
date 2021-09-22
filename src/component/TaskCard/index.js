@@ -16,12 +16,12 @@ const TaskCard = ({ item }) => {
         </View>
         <View style={styles.button}>
           <TouchableOpacity>
-            <AntDesign name="edit" size={20} color="#000" />
+            <AntDesign name="edit" size={20} color={theme.colors.primary} />
           </TouchableOpacity>
         </View>
         <View style={styles.button}>
           <TouchableOpacity>
-            <Feather name="trash-2" size={20} color="#000" />
+            <Feather name="trash-2" size={20} color={theme.colors.primary} />
           </TouchableOpacity>
         </View>
       </View>

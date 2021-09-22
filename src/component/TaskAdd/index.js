@@ -4,7 +4,9 @@ import styles from './styles';
 
 export default function TaskAdd({ handleAddPress }) {
   const [collectionName, setCollectionName] = useState('');
-
+  const click = () => {
+    console.log(te);
+  };
   return (
     <View style={styles.cardView}>
       <View style={styles.input}>
@@ -17,7 +19,7 @@ export default function TaskAdd({ handleAddPress }) {
         />
       </View>
       <View>
-        <TouchableOpacity style={styles.addButton} onPress={handleAddPress}>
+        <TouchableOpacity style={styles.addButton} onPress={click}>
           <Text>Adicionar</Text>
         </TouchableOpacity>
       </View>

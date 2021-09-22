@@ -23,7 +23,7 @@ const Home = ({ navigation }) => {
 
   useEffect(() => {
     setTasks(data);
-  }, []);
+  }, [data]);
 
   const handleAddPress = (task) => {
     data.push(task);
@@ -32,7 +32,7 @@ const Home = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Header navigation={navigation} toggleDrawer />
-      <TaskAdd />
+      <TaskAdd handleAddPress={(task) => handleAddPress(task)} />
       <TaskList tasks={tasks} />
     </View>
   );

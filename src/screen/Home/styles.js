@@ -7,4 +7,7 @@ export default StyleSheet.create({
     marginTop: StatusBar.currentHeight,
     marginBottom: 2,
   },
+  tasklist: {
+    marginVertical: 5,
+  },
 });
