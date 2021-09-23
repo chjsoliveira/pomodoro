@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import styles from './styles';
-import Header from '../../component/Header';
+import { Header } from '../../component';
 
 const About = ({ navigation }) => {
   return (
