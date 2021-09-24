@@ -1,12 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import styles from './styles';
-import { Feather, AntDesign } from '@expo/vector-icons';
+import { Feather, AntDesign, Entypo } from '@expo/vector-icons';
 import * as theme from '../../theme';
-import * as api from '../../services/api';
 import { CTX } from '../../tools/context';
+import StopWatch from '../StopWatch';
 
 const TaskCard = ({ item }) => {
+  const [stop, setStop] = useState(true);
+
   const taskContext = useContext(CTX);
   const { _deleteTask } = taskContext;
 
@@ -22,11 +24,15 @@ const TaskCard = ({ item }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.cardText}>{item.name}</Text>
-
+      {!stop && <StopWatch startMinutes={25} />}
       <View style={styles.containerButton}>
         <View style={styles.button}>
-          <TouchableOpacity>
-            <AntDesign name="play" size={20} color={theme.colors.primary} />
+          <TouchableOpacity onPress={() => setStop(!stop)}>
+            <Entypo
+              name={!stop ? 'controller-stop' : 'controller-play'}
+              size={20}
+              color={theme.colors.primary}
+            />
           </TouchableOpacity>
         </View>
         <View style={styles.button}>
