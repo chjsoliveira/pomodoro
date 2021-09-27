@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { View, Text, TouchableOpacity, TextInput } from 'react-native';
+import { View, Text, TouchableOpacity, TextInput, Alert } from 'react-native';
 import styles from './styles';
 import { CTX } from '../../tools/context';
 
@@ -10,7 +10,11 @@ export default function TaskAdd(props) {
   const { _addTask } = taskContext;
 
   const handleAddPress = () => {
-    console.log('handleAddPress');
+    if (taskName.length === 0) {
+      Alert.alert('Atenção', 'Nome Obrigatório');
+      return;
+    }
+
     const newTask = {
       name: taskName,
     };

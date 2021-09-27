@@ -10,7 +10,7 @@ const TaskCard = ({ item }) => {
   const [stop, setStop] = useState(true);
 
   const taskContext = useContext(CTX);
-  const { _deleteTask } = taskContext;
+  const { _deleteTask, _addStep } = taskContext;
 
   const handleDeletePress = (id) => {
     console.log('handleDeletePress');
@@ -21,13 +21,23 @@ const TaskCard = ({ item }) => {
     clearTimeout(timer);
   };
 
+  const handleStartStopPress = (name) => {
+    let prefix = !stop ? 'Tarefa ' : 'Iniciar tarefa ';
+    let suffix = !stop ? ' interrompida' : ' ';
+
+    _addStep({
+      title: prefix + name + suffix,
+    });
+    setStop(!stop);
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.cardText}>{item.name}</Text>
       {!stop && <StopWatch startMinutes={25} />}
       <View style={styles.containerButton}>
         <View style={styles.button}>
-          <TouchableOpacity onPress={() => setStop(!stop)}>
+          <TouchableOpacity onPress={() => handleStartStopPress(item.name)}>
             <Entypo
               name={!stop ? 'controller-stop' : 'controller-play'}
               size={20}

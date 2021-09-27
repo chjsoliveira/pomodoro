@@ -47,9 +47,10 @@ Pomodoro is a platform to control your activities and run the pomodoro technique
 <div align="center">
     <img width="250" src="https://github.com/chjsoliveira/pomodoro/blob/main/ScreenShot/Menu.png">    
     <img width="250" src="https://github.com/chjsoliveira/pomodoro/blob/main/ScreenShot/TaskList.PNG">
+    <img width="250" src="https://github.com/chjsoliveira/pomodoro/blob/main/ScreenShot/TimeLine.png">
 </div>
 
-More [screenshots]().
+More [screenshots](https://github.com/chjsoliveira/pomodoro/blob/master/SCREENSHOTS.md)
 
 ## Release APK
 

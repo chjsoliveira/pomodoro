@@ -7,6 +7,7 @@ export { CTX };
 
 export default function Store(props) {
   const [tasks, setTasks] = useState([]);
+  const [steps, setSteps] = useState([]);
 
   useEffect(() => {
     _bootstrapAsync();
@@ -14,7 +15,9 @@ export default function Store(props) {
 
   const _bootstrapAsync = async () => {
     const data = await api.getTaskList();
+    const dataStep = await api.getStepList();
     setTasks(data);
+    setSteps(dataStep);
   };
 
   const _addTask = async (newTask) => {
@@ -29,8 +32,22 @@ export default function Store(props) {
     setTasks(data);
   };
 
+  const _addStep = async (newStep) => {
+    await api.addStep(newStep);
+    const data = await api.getStepList();
+    setSteps(data);
+  };
+
+  const _resetSteps = async () => {
+    await api.resetSteps();
+    const data = await api.getStepList();
+    setSteps(data);
+  };
+
   return (
-    <CTX.Provider value={{ tasks, _addTask, _deleteTask }}>
+    <CTX.Provider
+      value={{ tasks, _addTask, _deleteTask, steps, _addStep, _resetSteps }}
+    >
       {props.children}
     </CTX.Provider>
   );
